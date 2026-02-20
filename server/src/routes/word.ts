@@ -6,6 +6,7 @@ const router = Router()
 // gets daily word from wordUtils.ts
 // sends result back to whoever called the endpoint
 router.get('/daily-word', (req, res) => {
+  console.log('Request received')
   const word = getDailyWord()
   res.json({ word })
 })
