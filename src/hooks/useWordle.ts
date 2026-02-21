@@ -56,6 +56,7 @@ export const useWordle = (validWords: string[]) => {
       if (!prev) return prev
       const newBoard = prev.board.map(row => ({ ...row, tiles: [...row.tiles.map(tile => ({ ...tile }))] }))
       newBoard[prev.currentRow]!.tiles[prev.currentCol]!.letter = letter
+      newBoard[prev.currentRow]!.tiles[prev.currentCol]!.state = 'filled'
       return { ...prev, board: newBoard, currentCol: prev.currentCol + 1 }
     })
   }

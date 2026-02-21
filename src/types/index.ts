@@ -1,5 +1,5 @@
 // the four possible states a tile can be in at any point
-export type TileState = 'correct' | 'present' | 'absent' | 'empty'
+export type TileState = 'correct' | 'present' | 'absent' | 'empty' | 'filled'
 
 // whether the game is in progress, won, or lost
 export type GameStatus = 'playing' | 'won' | 'lost'
