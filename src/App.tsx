@@ -3,12 +3,11 @@ import { useWordle } from './hooks/useWordle'
 import Board from './components/Board/Board'
 import Keyboard from './components/Keyboard/Keyboard'
 import Modal from './components/Modal/Modal'
+import { validWords } from './validWords'
 import './App.css'
 
-const VALID_WORDS = ['crane', 'apple', 'flint', 'globe', 'haunt', 'brave', 'chess', 'dwarf', 'elder', 'frost']
-
 function App() {
-  const { gameState, error, isLoading, addLetter, removeLetter, submitGuess } = useWordle(VALID_WORDS)
+  const { gameState, error, isLoading, addLetter, removeLetter, submitGuess } = useWordle(validWords)
 
   // function listens for keyboard input and maps it to the right game action.
   // useCallback wraps handleKeyDown to prevent it from being recreated on every render. 
