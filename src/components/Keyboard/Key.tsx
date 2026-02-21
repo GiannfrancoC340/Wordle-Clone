@@ -8,6 +8,7 @@ interface KeyProps {
   isWide?: boolean
 }
 
+// creates individual key
 function Key({ label, state, onClick, isWide }: KeyProps) {
   return (
     <button
