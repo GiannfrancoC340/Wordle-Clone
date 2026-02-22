@@ -13,7 +13,7 @@ function Board({ board }: BoardProps) {
       {board.map((row, rowIndex) => ( // iterates over each row
         <div key={rowIndex} className={styles.row}>
           {row.tiles.map((tile, tileIndex) => ( // iterates over each tile in that row — so it's a nested map producing a 6×5 grid.
-            <Tile key={tileIndex} tile={tile} /> // helps React efficiently track which items changed.
+            <Tile key={tileIndex} tile={tile} tileIndex={tileIndex} /> // helps React efficiently track which items changed.
           ))}
         </div>
       ))}
